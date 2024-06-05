@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AdminPanelFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="Список пользователей"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:layout_marginTop="70dp"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:id="@+id/list_account"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/admin_dell_btn"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="360dp"
+        android:padding="15dp"
+        android:text="Удалить"
+        android:textAllCaps="false"
+        android:background="@color/article_title"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        />
+
+    <EditText
+        android:id="@+id/admin_dell_login"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:hint="Логин"
+        android:inputType="text"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/admin_login_add_input"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="240dp"
+        android:hint="Логин"
+        android:inputType="text"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/admin_pass_add_input"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="240dp"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/admin_add_btn"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/article_title"
+        android:padding="15dp"
+        android:text="Добавить"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1072346351021",
+    "firebase_url": "https://carbuy-122d6-default-rtdb.firebaseio.com",
+    "project_id": "carbuy-122d6",
+    "storage_bucket": "carbuy-122d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072346351021:android:633198e5fe2b8e417e0d24",
+        "android_client_info": {
+          "package_name": "ru.mirea.carbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072346351021-nfmjkv735dchv1ruvo63bealmcupsv3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.mirea.carbuy",
+            "certificate_hash": "8a27a5786c7163ccb6d00a0f22fba7293422694c"
+          }
+        },
+        {
+          "client_id": "1072346351021-l7jup2f0sh83jdql4vg406roegr9fhqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLkX-eurY1EUZc4geLba7CLlI21FlEhMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072346351021-l7jup2f0sh83jdql4vg406roegr9fhqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

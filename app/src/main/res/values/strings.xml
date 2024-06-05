@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CarBuy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Car">
+        <item>Nissan</item>
+        <item>BMW</item>
+    </string-array>
+</resources>
