@@ -100,6 +100,7 @@ public class MyAdsFragment extends Fragment {
         // Находим элементы в нашем кастомном лейауте
         EditText titleAds = view.findViewById(R.id.adsTitle);
         EditText markCarEditText = view.findViewById(R.id.markCar);
+        EditText infoCarEditText = view.findViewById(R.id.infoCar);
         EditText priceCarEditText = view.findViewById(R.id.priceCar);
         EditText numTelEditText = view.findViewById(R.id.numTel);
 
@@ -108,6 +109,7 @@ public class MyAdsFragment extends Fragment {
             // Получаем введенные значения
             String title = titleAds.getText().toString();
             String markCar = markCarEditText.getText().toString();
+            String infoCar = infoCarEditText.getText().toString();
             String priceCar = priceCarEditText.getText().toString();
             String numTel = numTelEditText.getText().toString();
 
@@ -118,7 +120,7 @@ public class MyAdsFragment extends Fragment {
             }
 
             // Создаем новое объявление
-            Ads newAds = new Ads(title, markCar, priceCar, numTel);
+            Ads newAds = new Ads(title, markCar, infoCar, priceCar, numTel);
 
             // Вызываем метод ViewModel для сохранения нового объявления
             AdsViewModel adsViewModel = new ViewModelProvider((FragmentActivity) context).get(AdsViewModel.class);

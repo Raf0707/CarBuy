@@ -80,7 +80,7 @@ public class SearchFragment extends Fragment {
                 imRes = R.drawable.nissan_qashkai;
             } else if (selectedItem.equals("Nissan 370z nismo (1 925 123 руб.)")) {
                 imRes = R.drawable.z370;
-            } else if (selectedItem.equals("BMW M5 (9 400 000 руб.)")) {
+            } else if (selectedItem.equals("BMW M5 (9 400 000 руб.) ")) {
                 imRes = R.drawable.m5bmw;
             } else if (selectedItem.equals("BMW 320i xDrive (3 330 000 руб.)")) {
                 imRes = R.drawable.i320bmw;
@@ -104,7 +104,7 @@ public class SearchFragment extends Fragment {
             transaction.commit();
 
 
-            //System.out.println(selectedItem);
+            System.out.println(selectedItem);
 
             /*
             Nissan GT-R (7 626 000 руб.)

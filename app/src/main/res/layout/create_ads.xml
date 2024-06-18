@@ -32,6 +32,19 @@
         app:layout_constraintVertical_bias="0.047" />
 
     <EditText
+        android:id="@+id/infoCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Информация об автомобиле"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/markCar"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <EditText
         android:id="@+id/numTel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceCar"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/priceCar"
@@ -54,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/markCar"
+        app:layout_constraintTop_toBottomOf="@+id/infoCar"
         app:layout_constraintVertical_bias="0.044" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

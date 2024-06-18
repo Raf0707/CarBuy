@@ -16,13 +16,18 @@ public class Ads implements Serializable {
     private String adsTitle;
     @ColumnInfo(name = "mark")
     private String markCar;
+
+    @ColumnInfo(name = "info")
+    private String infoCar;
     @ColumnInfo(name = "price")
     private String priceCar;
     @ColumnInfo(name = "telephone")
     private String numTelephone;
 
-    public Ads(String title, String markCar, String priceCar, String numTelephone) {
+    public Ads(String adsTitle, String markCar, String infoCar, String priceCar, String numTelephone) {
+        this.adsTitle = adsTitle;
         this.markCar = markCar;
+        this.infoCar = infoCar;
         this.priceCar = priceCar;
         this.numTelephone = numTelephone;
     }
@@ -57,6 +62,14 @@ public class Ads implements Serializable {
 
     public void setAdsTitle(String adsTitle) {
         this.adsTitle = adsTitle;
+    }
+
+    public String getInfoCar() {
+        return infoCar;
+    }
+
+    public void setInfoCar(String infoCar) {
+        this.infoCar = infoCar;
     }
 
     /*
