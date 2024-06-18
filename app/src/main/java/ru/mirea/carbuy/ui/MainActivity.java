@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.FirebaseApp;
 
 import ru.mirea.carbuy.R;
 import ru.mirea.carbuy.model.Users;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity  implements BottomNavigation
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseApp.initializeApp(this);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 

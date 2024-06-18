@@ -11,6 +11,7 @@ import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -63,20 +64,58 @@ public class SearchFragment extends Fragment {
         // Добавляем обработчик кликов на элементы списка
         listView.setOnItemClickListener((parent, view1, position, id) -> {
             String selectedItem = listData.get(position);
-            Bundle bundle = new Bundle();
-            /*if (selectedItem.equals(""))
-            bundle.putString("carName", selectedItem);
-            bundle.putString("carPrice", "Цена: 10000$");
-            bundle.putInt("carImage", R.drawable.nissan_qashqai);*/
 
-            /*ProductCardFragment productCardFragment = new ProductCardFragment();
+            // Найти индекс начала и конца скобок
+            int startIndex = selectedItem.indexOf('(');
+            int endIndex = selectedItem.indexOf(')');
+
+            // Извлечь марку машины и цену
+            String carName = selectedItem.substring(0, startIndex).trim();
+            String carPrice = selectedItem.substring(startIndex + 1, endIndex).trim();
+            int imRes = 0;
+
+            if (selectedItem.equals("Nissan GT-R (7 626 000 руб.)")) {
+                imRes = R.drawable.nissan_gtr;
+            } else if (selectedItem.equals("Nissan Qashqai (1 555 000 руб.)")) {
+                imRes = R.drawable.nissan_qashkai;
+            } else if (selectedItem.equals("Nissan 370z nismo (1 925 123 руб.)")) {
+                imRes = R.drawable.z370;
+            } else if (selectedItem.equals("BMW M5 (9 400 000 руб.)")) {
+                imRes = R.drawable.m5bmw;
+            } else if (selectedItem.equals("BMW 320i xDrive (3 330 000 руб.)")) {
+                imRes = R.drawable.i320bmw;
+            } else if (selectedItem.equals("BMW X6 (6 650 000 руб.)")) {
+                imRes = R.drawable.x6bmw;
+            } else if (selectedItem.equals("BMW 1 (1 600 000 руб.)")) {
+                imRes = R.drawable.bmw1;
+            }
+
+            Bundle bundle = new Bundle();
+            bundle.putString("carName", carName);
+            bundle.putString("carPrice", carPrice);
+            bundle.putInt("carImage", imRes);
+
+            ProductCardFragment productCardFragment = new ProductCardFragment();
             productCardFragment.setArguments(bundle);
 
             FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, productCardFragment);
             transaction.addToBackStack(null);
-            transaction.commit();*/
-            System.out.println(selectedItem.toString());
+            transaction.commit();
+
+
+            //System.out.println(selectedItem);
+
+            /*
+            Nissan GT-R (7 626 000 руб.)
+            Nissan Qashqai (1 555 000 руб.)
+            Nissan 370z nismo (1 925 123 руб.)
+
+            BMW M5 (9 400 000 руб.)
+            BMW 320i xDrive (3 330 000 руб.)
+            BMW X6 (6 650 000 руб.)
+            BMW 1 (1 600 000 руб.)
+             */
         });
 
         return view;

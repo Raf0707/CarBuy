@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -26,18 +27,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    lintOptions {
-        checkReleaseBuilds false
-    }
+
 
     buildFeatures {
         viewBinding true
-        buildConfig true
     }
 }
 
 dependencies {
 
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation platform('com.google.firebase:firebase-bom:33.1.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -53,4 +53,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.google.firebase:firebase-auth'
+    annotationProcessor 'androidx.room:room-compiler:2.5.0-alpha02'
+    implementation 'androidx.room:room-runtime:2.5.0-alpha02'
+    implementation 'androidx.lifecycle:lifecycle-service:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1'
 }
